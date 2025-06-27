@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="“width=800”">
+  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <style type="text/css">
+    /* Color scheme stolen from Sergey Karayev */
+    a {
+    color: #1772d0;
+    text-decoration:none;
+    }
+    a:focus, a:hover {
+    color: #f09228;
+    text-decoration:none;
+    }
+    body,td,th,tr,p,a {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px
+    }
+    strong {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    }
+    heading {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 22px;
+    }
+    papertitle {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700
+    }
+    name {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    font-size: 32px;
+    }
+    .one
+    {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    }
+    .two
+    {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+    }
+    .fade {
+     transition: opacity .2s ease-in-out;
+     -moz-transition: opacity .2s ease-in-out;
+     -webkit-transition: opacity .2s ease-in-out;
+    }
+    span.highlight {
+        background-color: #ffffd0;
+    }
+    .news-item {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+  }
+  
+  .news-item:hover {
+    background-color: #f5f5f5;
+    transform: translateX(5px);
+  }
+
+  .paper-section {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+  }
+  
+  .paper-section:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  a {
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    color: #f09228;  /* or any color you prefer */
+  }
+
+  .highlight {
+    background-color: #ffffd0;
+  }
+
+  heading {
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: block;
+  }
+  
+  </style>
+  <link rel="icon" type="image/png" href="http://cs-people.bu.edu/nruiz9/figs/bu_logo.png">
+  <title>Arsenii Mustafin</title>
+  
+  <link href="./css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+    <!-- Add this new table for the two-column layout -->
+    <table width="1400" border="0" align="center" cellspacing="0" cellpadding="0">
+      <tr>
+                <!-- News feed column -->
+                <td width="300" style="vertical-align: top; padding-left: 20px; background-color: #f9f9f9; border-radius: 8px;">
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tr>
+              <td>
+                <heading>News</heading>
+
+              <p>Right now I cannot get back to Boston since my US visa has been processing for <span id="dayCounter"></span>!</p>
+                <script>
+                  function updateDayCount() {
+                    const startDate = new Date('2024-06-13');
+                    const today = new Date();
+                    const diffTime = Math.abs(today - startDate);
+                    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                    document.getElementById('dayCounter').textContent = diffDays + " days";
+                  }
+                  
+                  // Run when page loads
+                  updateDayCount();
+                </script>
+
+                <div style="max-height: 600px; overflow-y: auto;">
+                  <ul style="padding-left: 20px; list-style-type: disc;">
+
+                  <li class="news-item"><p><strong>February 6, 2025</strong><br>
+                  I added my new paper on Value Iteration analysis with
+                  absolute probability sequences to the website!</p></li>
+
+                    <li class="news-item"><p><strong>January 22, 2025</strong><br>
+                  My MDP Geometry paper was accepted to AISTATS 2025!</p></li>
+                  
+                  <li class="news-item"><p><strong>January 8 & 9, 2025</strong><br>
+                  I presented my MDP Geometry paper in the Technion (Shie Mannor's lab) and 
+                  TAU (Tomer Koren's lab).</p></li>
+                  
+                  <li class="news-item"><p><strong>October 2, 2024</strong><br>
+                  I presented my MDP Geometry paper at the seminar in University of Cyprus
+                   (<a href="https://www.ucy.ac.cy/ece/wp-content/uploads/sites/41/2024/09/Mustafin-Arsenii-.pdf">announcement</a>)</p>
+                  </li> 
+
+                   <li class="news-item"><p><strong>September 16, 2024</strong><br>
+                    Since my US visa is still not ready, I came to Cyprus where I will stay as a visiting 
+                  researcher at University of Cyprus.</p></li>
+                  
+                  <li class="news-item"><p><strong>July 17, 2024</strong><br>
+                  My TD-SVRG paper was accepted to TMLR 2024!</p></li>                  
+                </ul>
+                  </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+
+          <!-- Main content column -->
+          <td width="1100">
+          <table width="1100" border="0" align="center" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+            <td>
+
+              <!-- ABOUT -->
+
+              <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tbody><tr>
+                <td width="75%" valign="middle">
+                <p align="center">
+                  <name>Arsenii Mustafin</name>
+                </p>
+                <p style="color: red;">
+                  <span class="highlight">
+                    I am looking for a Postdoc position starting Summer 2025. I want to continue working on Reinforcement Learning 
+                    and ideally dedicate some time to further develop the MDP Geometry framework. If you have an open
+                    position or know someone who does, please send me an email.
+                  </span>
+                </p>
+                <p style="text-align:justify"><br>
+                  I am a 6th year PhD student at 
+                  <a href="http://www.bu.edu/">Boston University</a>, department of Computer Science.
+                  I am advised by Prof. 
+                  <a href="https://sites.bu.edu/aolshevsky/">Alex Olshevsky</a> and
+                  Prof. 
+                  <a href="https://www.bu.edu/eng/profile/ioannis-paschalidis/">Yannis Paschalidis</a>. 
+                  My main interest is Reinforcement learning, both theoretical and practical. I am also 
+                  interested in other topics in machine learning, 
+                  including computer vision, explainability and deep fake detection.
+                  Previously I worked on SemaFor DARPA project with BU team lead by Prof.
+                  <a href="https://www.bu.edu/cs/profiles/saenko/">Kate Saenko</a> 
+                  and a project on Explainable AI with 
+                  Prof. <a href="https://cs-people.bu.edu/sbargal/">Sarah Adel Bargal</a>.</p>
+          <p style="text-align:justify"> <b>Completed coursework:</b> EC700: Reinforcement learning, CS591: Deep Learning, 
+            CS542: Machine Learning, EC724: Advanced Optimization, CS565: Algorithmic Data Mining,
+              CS537: Randomness in Computing, CS531: Advanced optimization algorithms, CS655: Computer network, EC 500 A2: Robot Learning
+              and Vision for Navigation. </p>
+            <p style="text-align:justify">Previously I was studying economics, and took several undergraduate
+            and graduate-level courses on econometrics and time-series analysis. 
+            Prior to coming to BU, I worked as a machine learning developer.
+          I spent four years in Mainland China and speak fluent Mandarin, in addition to fluent English and native Russian.
+        </p>
+
+                <p align="center">
+                  aam [at] bu.edu &nbsp;|&nbsp;
+                  <a href="CV.pdf">CV</a> &nbsp;|&nbsp;
+                  <a href="https://www.linkedin.com/in/arsenii-mustafin-7bb2aa143/"> LinkedIn </a> &nbsp;|&nbsp;
+                  <a href="https://github.com/gaarsmu">Github</p>
+                </p>
+                </td>
+                <td width="25%">
+                
+                <img width=200 src="Images/my_photo.png">
+                </td>
+              </tr>
+              </tbody></table>
+
+
+              <!-- SKILLS -->
+
+              <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+                <tbody><tr>
+                  <td width="100%" valign="middle">
+                    <heading>Skills</heading>
+                    <p><b>Algorithmic:</b> Reinforcement Learning, Deep Learning, classic Machine Learning 
+                    algorithms, Time Series analysis.</p>
+                    <p><b>Software:</b> PyTorch,  Tensorflow (1&2), Linux (+git), SQL.</p>
+                  </td>
+                </tr>
+                </tbody></table>
+
+
+              <!-- Projects -->
+
+              <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tbody><tr>
+                <td width="100%" valign="middle">
+                  <heading>Papers & Patents:</heading>
+                </td>
+              </tr>
+              </tbody></table>
+
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+            <tr class="paper-section">
+              <td width="25%">
+                <div class="one">
+                <img width=190 src="Images/policy_hp_plot_cut.png">
+                </div>
+              </td>
+              <td valign="top" width="75%">
+                <p><a href="https://arxiv.org/abs/2407.06712">
+                  <papertitle>MDP Geometry, Normalization and Reward Balancing Solvers</papertitle></a><br>
+                  <strong>Mustafin A.</strong>, Pakharev A., Olshevsky, A., Paschalidis, I.</a><br>
+                  Accepted to AISTATS 2025 <br>
+                  </p>
+                  <p style="text-align:justify">
+                    In this work we suggest a new geometric view on MDP, which allows to interpret the main MDP problems as geometric problems. 
+                    Inspired by this view we propose a Normalization procedure which transforms an MDP to a form, in which finding optimal policy
+                    is trivial. It enables a new class of MDP solving algorithms, which we call Reward Balancing Solvers. One algorithm from
+                    this class, Safe Reward Balancing (RB-S) achieves and exceeds the state-of-the-art convergence guarantees in known MDP
+                      (Value Iteration), unknown MDP (Q-learning) and federated unknown MDP (Federated Q-learning) settings.</p>
+              </td>
+            </tr>
+
+            <tr class="paper-section">
+              <td width="25%">
+                <div class="one">
+                <img width=190 src="Images/L2_norm_paper_image.png">
+                </div>
+              </td>
+              <td valign="top" width="75%">
+                <p><a href="https://arxiv.org/abs/2502.03244">
+                  <papertitle>Analysis of Value Iteration Through Absolute Probability Sequences</papertitle></a><br>
+                  <strong>Mustafin A.</strong>, Colla, S., Olshevsky, A., Paschalidis, I.</a><br>
+                  Currently under review, 2025 <br>
+                  </p>
+                  <p style="text-align:justify">
+                    In this work, we use absolute probability sequences to develop a new line of analysis of Value Iteration algorithm
+                    and examine its convergence in terms of the L² norm, offering a new perspective on its behavior and performance.</p>
+              </td>
+            </tr>
+
+            <tr class="paper-section">
+              <td width="25%">
+                <div class="one">
+                <img width=190 src="Images/TD_SVRF_webpage_image.png">
+                </div>
+              </td>
+              <td valign="top" width="75%">
+                <p><a href="https://arxiv.org/abs/2211.16237">
+                  <papertitle>Closing the Gap Between SVRG and TD-SVRG with Gradient Splitting</papertitle></a><br>
+                  <strong>Mustafin A.</strong>, Olshevsky, A., Paschalidis, I.</a><br>
+                  TMLR, 2024 <br>
+                  
+                  </p>
+                  <p style="text-align:justify">
+                    In the paper, my coauthors and I significantly improve theoretical guarantees of SVRG method applied to TD update,
+                    show that it exhibits the same convergence 
+                    as SVRG in convex optimization setting and provide theoretical guarantees for practical algorithm. </p>
+              </td>
+              </tr>
+
+              <tr class="paper-section">
+              <td width="25%">
+                <div class="one">
+                <img width=190 src="Images/Anyjif_paper_image.png">
+                </div>
+              </td>
+              <td valign="top" width="75%">
+                <p><a href="https://www.frontiersin.org/articles/10.3389/fcomp.2022.876846/full">
+                  <papertitle>Ani-GIFs: A Benchmark Dataset for Domain Generalization of Action Recognition from GIFs</papertitle></a><br>
+                  <strong>Mustafin, A.*</strong>, Jain, S.*, Lteif, D.*, Majumdar S.*,
+                    Tourni, I.*, Bargal S., Saenko K., Sclaroff S.</a><br>
+                  Frontiers in Computer Science, 2022 <br>
+                  
+                  </p>
+                  <p style="text-align:justify">
+                  This paper published in "Frontiers in computer science" presents a dataset for
+                  Domain Generalization problems in the video domain. </p>
+              </td>
+              </tr>
+
+              <tr class="paper-section">
+              <td width="25%">
+                <div class="one">
+                <img width=190 src="Images/Patent_image.png">
+                </div>
+              </td>
+              <td valign="top" width="75%">
+                <p><a href="https://patents.justia.com/patent/20210264161">
+                  <papertitle>Patent: SYSTEMS AND METHODS FOR IMAGE OR VIDEO PERFORMANCE HEAT MAP
+                    GENERATION </papertitle></a><br>
+                  <strong> Mustafin A.</strong>, Saraee E., Hamedi J., Halloran Z.</a><br>
+                  US Patent, 2021 <br>
+                  
+                  </p>
+                  <p style="text-align:justify">
+                  The patent application was a result of my internship at Vizit labs, Inc, during which I 
+                  played a key role in developing an explainability technique for computer vision model. </p>
+              </td>
+              </tr>
+              
+            </td>
+          
+            </tbody>
+          </tbody></table>
+          </td>
+      </tr>
+    </table> 
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  <tbody><tr>
+    <td>
+    <br>
+    <p align="right">
+      <font size="1">
+      <a href="https://jonbarron.info/">Original template</a>
+  </font>
+    </p>
+    </td>
+  </tr>
+  </tbody></table>
+
+<!-- <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script><script src="ga.js" type="text/javascript"></script> <script type="text/javascript">
+try {
+    var pageTracker = _gat._getTracker("UA-7580334-1");
+    pageTracker._trackPageview();
+    } catch(err) {}
+</script> -->
+</body></html>
